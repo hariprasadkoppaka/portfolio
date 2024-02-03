@@ -463,3 +463,9 @@ textarea {
     margin: 1rem;
     cursor: pointer;
 }
+.count1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: #0B1D28;
+}

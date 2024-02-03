@@ -373,7 +373,12 @@
           </div>
       </section>
 
-
+      <!-------count-->
+      <div class="count1">
+        <p style="font-size: 2.2rem;">This website has been visited:</p>
+        <p id="visit-count">0</p>  
+        </div>
+       
 
 
 
@@ -440,10 +445,6 @@
 
             </div>
 
-           
-
-
-
           </div>
           <div class="footer__copyright">
             <small>Copyright &copy; AITAM-IT </small>
@@ -452,7 +453,20 @@
         </footer>
 
 
-
+        <script>
+          // Function to update and display visit count
+          function updateVisitCount() {
+            let count = localStorage.getItem('visitCount') || 0;
+            count = parseInt(count) + 1;
+            localStorage.setItem('visitCount', count);
+            document.getElementById('visit-count').textContent = count;
+          }
+      
+          // Call the function on page load
+          window.onload = function() {
+            updateVisitCount();
+          };
+        </script>
 
         <script src="./main.js"></script>
 
